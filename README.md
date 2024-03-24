@@ -1,4 +1,4 @@
-# Artificial Intelligence ChatBot
+# AI for Personalized Customer Service Chatbots
 
 AI chatbot is a machine learning based intelligent chatbot designed to provide human-like conversation. Chatbot is created with intention to shorten the gap between business and customer.
 
