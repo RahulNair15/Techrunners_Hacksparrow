@@ -1,0 +1,884 @@
+{
+  "intents": [
+    {
+      "tag": "greetings1",
+      "patterns": [
+        "Hi, how are you?",
+        "Hello",
+        "hello",
+        "Hi",
+        "hi",
+        "Hola",
+        "hola",
+        "Howdy",
+        "howdy",
+        "Greetings",
+        "greetings",
+        "Hey",
+        "hey",
+        "hii",
+        "hiii",
+        "hiiii",
+        "Namaste",
+        "namaste",
+        "Vanakkam",
+        "vanakkam",
+        "Namaskar",
+        "namaskar"
+      ],
+      "responses": [
+        "Namaste! How can I help you today?",
+        "Namaste :)",
+        "Namaste! How can I help you today?",
+        "Namaste :)"
+      ]
+    },
+    {
+      "tag": "greetings2",
+      "patterns": [
+        "how are you doing?",
+        "how are you?",
+        "hi how are you?",
+        "hello how are you?"
+      ],
+      "responses": [
+        "I'm fine what about you?",
+        "Thanks for asking! I'm excellent. How about you?",
+        "Fine, thanks. What do you got for me today?"
+      ]
+    },
+    {
+      "tag": "name",
+      "patterns": [
+        "what is your name?",
+        "what should I call you?",
+        "who are you?"
+      ],
+      "responses": [
+        "I'm Aapi and I'm here to help you out ;)"
+      ]
+    },
+    {
+      "tag": "help",
+      "patterns": [
+        "help",
+        "help!"
+      ],
+      "responses": [
+        "Ok, you can ask me about:<br> Meal plan subscription process. <br>FoodPicky contact details.<br>Particulars of different meal plans.<br> Cost details."
+      ]
+    },
+    {
+      "tag": "Trending",
+      "patterns": [
+        "Top selling indian dishes today"
+      ],
+      "responses": [
+        "Butter Chicken, Chicken Tikka Masala, Paneer Tikka"
+      ]
+    },
+    {
+      "tag": "Negative",
+      "patterns": [
+        "worst",
+        "Less Quantity",
+        "smelly",
+        "spicy",
+        "salty",
+        "bad"
+      ],
+      "responses": [
+        "We are extremely sorry for the quality of our products &#129402;"
+      ]
+    },
+    {
+      "tag": "positive",
+      "patterns": [
+        "Best",
+        "good",
+        "delicious",
+        "tasty",
+        "better",
+        "yummy"
+      ],
+      "responses": [
+        "Thank you for your feedback &#128522;"
+      ]
+    },
+    {
+      "tag": "meal-subscription",
+      "patterns": [
+        "what is the meal plan subscription process?",
+        "i want to subscribe to a meal plan."
+      ],
+      "responses": [
+        "Step 1. Register to Slice.<br>Step 2. Login to Slice.<br>Step 3. Choose your Meal plan.<br>Step 4. Customize your Meal plan<br>Step 5. Choose duration of subscription.<br>Step 6. Fill your Address and Payment method.<br>Step 7. Pay and recieve Confirmation."
+      ]
+    },
+    {
+      "tag": "meal-details",
+      "patterns": [
+        "can I customize my meal?",
+        "i want to customize my meal"
+      ],
+      "responses": [
+        "You can customize your meals by adding or removing dishes from your meal plan."
+      ]
+    },
+    {
+      "tag": "idli",
+      "patterns": [
+        "idli",
+        "what does idli looks like"
+      ],
+      "responses": [
+        " <a href='https://i.ibb.co/6JWJ20b/idli.jpg'>Click here</a>"
+      ]
+    },
+    {
+      "tag": "panner-rice",
+      "patterns": [
+        "paneer rice",
+        "what does paneer rice looks like"
+      ],
+      "responses": [
+        " <a href='https://i.ibb.co/vvBxzYQ/paneer-rice.jpg'>Click here</a>"
+      ]
+    },
+    {
+      "tag": "pav bhaji",
+      "patterns": [
+        "pav bhaji",
+        "what does pav bhaji looks like"
+      ],
+      "responses": [
+        " <a href='https://i.ibb.co/sJJhv13/pav-bhaji.jpg'>Click here</a>"
+      ]
+    },
+    {
+      "tag": "samosa",
+      "patterns": [
+        "samosa",
+        "what does samosa looks like"
+      ],
+      "responses": [
+        " <a href='https://i.ibb.co/ZGkSCkm/samosa.jpg'>Click here</a>"
+      ]
+    },
+    {
+      "tag": "img",
+      "patterns": [
+        "upload image",
+        "complain uploading image"
+      ],
+      "responses": [
+        "<a href='uploadImage'>Click here</a>"
+      ]
+    },
+    {
+      "tag": "meal-plan",
+      "patterns": [
+        "what meal plans exist?",
+        "how many meal plans are available?",
+        "is there only a single meal plan?"
+      ],
+      "responses": [
+        "There are 3 meal plans: <br>1. Basic Plan<br>2. Standard Plan<br>3. Premium Plan"
+      ]
+    },
+    {
+      "tag": "services",
+      "patterns": [
+        "how to contact?"
+      ],
+      "responses": [
+        "Our no. 9999999999"
+      ]
+    },
+    {
+      "tag": "client",
+      "patterns": [
+        "My previous orders"
+      ],
+      "responses": [
+        " <a href='clientInfo'>Click here</a>"
+      ]
+    },
+    {
+      "tag": "basic",
+      "patterns": [
+        "what does the basic plan contain?"
+      ],
+      "responses": [
+        "Basic plan contains 2 vegetable curries, 4 chapathis and 250g rice and dal."
+      ]
+    },
+    {
+      "tag": "specials",
+      "patterns": [
+        "what is special today"
+      ],
+      "responses": [
+        "Shahi pulao, biryani and gulab jamun"
+      ]
+    },
+    {
+      "tag": "standard",
+      "patterns": [
+        "what does the standard plan contain?"
+      ],
+      "responses": [
+        "Standard plan contains 2 vegetable curries, 4 chapathis and 250g rice, dal and a dessert."
+      ]
+    },
+    {
+      "tag": "premium",
+      "patterns": [
+        "what does the premium plan contain?"
+      ],
+      "responses": [
+        "Premium plan contains 2 vegetable curries, 4 chapathis and 350g biryani, dal and a dessert."
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "good Bye Aapi",
+        "see You later",
+        "till next time",
+        "meet you later"
+      ],
+      "responses": [
+        "See you, Have a nice day :)",
+        "Bye,Come back soon! ",
+        "Thanks For Asking! "
+      ]
+    },
+    {
+      "tag": "noans",
+      "patterns": [
+        "why",
+        "how",
+        "when",
+        "I",
+        "you"
+      ],
+      "responses": [
+        "Hey there!, I'm still learning stuff can you please elaborate it?",
+        "You know, according to my lawyer, I don't have to answer that."
+      ]
+    },
+    {
+      "tag": "greeting",
+      "patterns": [
+        "hi",
+        "hello",
+        "hey",
+        "howdy",
+        "hi there"
+      ],
+      "responses": [
+        "Hello! How can I assist you today?",
+        "Hi there! How can I help you?"
+      ]
+    },
+    {
+      "tag": "delivery_status",
+      "patterns": [
+        "track my order",
+        "where is my food",
+        "delivery status",
+        "is my food on the way"
+      ],
+      "responses": [
+        "Let me check the status of your order.",
+        "Your order is out for delivery.",
+        "Your food is on its way!"
+      ]
+    },
+    {
+      "tag": "delivery_time",
+      "patterns": [
+        "how long does delivery take?",
+        "what's the delivery time?",
+        "when will my food arrive?"
+      ],
+      "responses": [
+        "Delivery times vary based on location and order volume. It usually takes about 30-45 minutes.",
+        "Your food should arrive within the next 45 minutes."
+      ]
+    },
+    {
+      "tag": "delivery_charges",
+      "patterns": [
+        "what are the delivery charges?",
+        "do you charge for delivery?",
+        "is there a delivery fee?"
+      ],
+      "responses": [
+        "Delivery charges depend on your location and order size.",
+        "Yes, there may be a delivery fee based on your order and location."
+      ]
+    },
+    {
+      "tag": "order_modification",
+      "patterns": [
+        "can I change my order?",
+        "modify my order",
+        "cancel my order"
+      ],
+      "responses": [
+        "Modifications to your order may be possible, depending on the status. Please contact customer support for assistance.",
+        "You may be able to modify or cancel your order if it hasn't been processed yet."
+      ]
+    },
+    {
+      "tag": "contact_support",
+      "patterns": [
+        "I need help with my order",
+        "how can I contact customer support?",
+        "my order is incorrect, what do I do?"
+      ],
+      "responses": [
+        "Please contact our customer support team for assistance with your order.",
+        "You can reach our customer support team at [phone number] or [email address]."
+      ]
+    },
+    {
+      "tag": "menu_inquiry",
+      "patterns": [
+        "what's on the menu?",
+        "show me the menu",
+        "what dishes do you offer?"
+      ],
+      "responses": [
+        "You can view our menu on our website or app.",
+        "We offer a variety of dishes including pizzas, burgers, salads, and more. Check out our menu for details."
+      ]
+    },
+    {
+      "tag": "promotions",
+      "patterns": [
+        "are there any promotions?",
+        "do you have any discounts?",
+        "any special offers?"
+      ],
+      "responses": [
+        "We occasionally offer promotions and discounts. Check our website or app for the latest offers.",
+        "Keep an eye out for our special promotions and discounts!"
+      ]
+    },
+    {
+      "tag": "payment_methods",
+      "patterns": [
+        "what payment methods do you accept?",
+        "can I pay with cash?",
+        "do you accept credit cards?"
+      ],
+      "responses": [
+        "We accept various payment methods including credit/debit cards, online payment, and cash on delivery.",
+        "Yes, you can pay with cash upon delivery. We also accept credit/debit cards and online payment."
+      ]
+    },
+    {
+      "tag": "order_tracking",
+      "patterns": [
+        "how can I track my order?",
+        "can I track my delivery?",
+        "track my food"
+      ],
+      "responses": [
+        "You can track your order status on our website or app.",
+        "To track your delivery, visit the 'Order Status' section on our website or app."
+      ]
+    },
+    {
+      "tag": "delivery_feedback",
+      "patterns": [
+        "provide feedback on my delivery",
+        "rate my delivery experience",
+        "leave feedback for my order"
+      ],
+      "responses": [
+        "We appreciate your feedback! You can leave a review and rate your delivery experience on our website or app.",
+        "Your feedback helps us improve our service. Feel free to share your experience and provide feedback on your delivery."
+      ]
+    },
+    {
+      "tag": "delivery_area",
+      "patterns": [
+        "what areas do you deliver to?",
+        "is delivery available in my area?",
+        "do you deliver to [area]?"
+      ],
+      "responses": [
+        "We deliver to a wide range of areas. Please enter your location on our website or app to check delivery availability in your area.",
+        "Delivery availability varies depending on your location. Please enter your address on our website or app to confirm delivery to your area."
+      ]
+    },
+    {
+      "tag": "order_recommendation",
+      "patterns": [
+        "can you recommend a dish?",
+        "what's popular on the menu?",
+        "suggest something for me to order"
+      ],
+      "responses": [
+        "Our popular dishes include pizzas, burgers, pasta, and salads. You can also check our featured items on the menu for recommendations.",
+        "Customers love our pizzas, burgers, and pasta dishes! You might want to try one of our signature dishes."
+      ]
+    },
+    {
+      "tag": "loyalty_program",
+      "patterns": [
+        "do you have a loyalty program?",
+        "are there any rewards for frequent customers?",
+        "loyalty benefits"
+      ],
+      "responses": [
+        "Yes, we offer a loyalty program for our regular customers. Earn points with every order and redeem them for discounts or freebies.",
+        "Join our loyalty program to enjoy exclusive benefits, discounts, and rewards for being a loyal customer."
+      ]
+    },
+    {
+      "tag": "delivery_instructions",
+      "patterns": [
+        "can I leave special delivery instructions?",
+        "how can I specify delivery preferences?",
+        "special instructions for delivery"
+      ],
+      "responses": [
+        "Yes, you can leave special instructions during checkout for delivery preferences or special requests.",
+        "Feel free to add any special instructions or delivery preferences in the 'Order Notes' section during checkout."
+      ]
+    },
+    {
+      "tag": "order_confirmation",
+      "patterns": [
+        "can I get a confirmation of my order?",
+        "confirm my order",
+        "order confirmation email"
+      ],
+      "responses": [
+        "You will receive an order confirmation email shortly after placing your order.",
+        "Your order has been confirmed. You'll receive a confirmation email shortly."
+      ]
+    },
+    {
+      "tag": "delivery_time_estimate",
+      "patterns": [
+        "can you estimate the delivery time?",
+        "how soon will my food arrive?",
+        "estimated delivery time"
+      ],
+      "responses": [
+        "Delivery times may vary depending on current demand and your location. An estimated delivery time will be provided during checkout.",
+        "We'll provide you with an estimated delivery time based on your location and order details."
+      ]
+    },
+    {
+      "tag": "order_history",
+      "patterns": [
+        "can I view my order history?",
+        "access my past orders",
+        "order records"
+      ],
+      "responses": [
+        "Yes, you can view your order history and past orders in your account profile.",
+        "Your order history is available in your account settings. You can access it to view past orders and order details."
+      ]
+    },
+    {
+      "tag": "promotional_offers",
+      "patterns": [
+        "are there any current promotions?",
+        "show me current offers",
+        "special deals"
+      ],
+      "responses": [
+        "Check our website or app for current promotions and special offers available.",
+        "We have ongoing promotions and special deals. Visit our website or app to see the latest offers."
+      ]
+    },
+    {
+      "tag": "delivery_feedback",
+      "patterns": [
+        "provide feedback on my delivery",
+        "rate my delivery experience",
+        "leave feedback for my order"
+      ],
+      "responses": [
+        "We appreciate your feedback! You can leave a review and rate your delivery experience on our website or app.",
+        "Your feedback helps us improve our service. Feel free to share your experience and provide feedback on your delivery."
+      ]
+    },
+    {
+      "tag": "order_cancellation",
+      "patterns": [
+        "can I cancel my order?",
+        "cancel order",
+        "change my mind about my order"
+      ],
+      "responses": [
+        "You may be able to cancel your order if it hasn't been processed yet. Please contact customer support for assistance.",
+        "You can request to cancel your order if it hasn't been prepared or dispatched yet."
+      ]
+    },
+    {
+      "tag": "delivery_feedback",
+      "patterns": [
+        "provide feedback on my delivery",
+        "rate my delivery experience",
+        "leave feedback for my order"
+      ],
+      "responses": [
+        "We appreciate your feedback! You can leave a review and rate your delivery experience on our website or app.",
+        "Your feedback helps us improve our service. Feel free to share your experience and provide feedback on your delivery."
+      ]
+    },
+    {
+      "tag": "delivery_tracking",
+      "patterns": [
+        "how can I track my delivery?",
+        "track my order",
+        "delivery status"
+      ],
+      "responses": [
+        "You can track your delivery in real-time through our website or app. Simply enter your order details to get updates on the delivery status.",
+        "Track your order status and delivery progress on our website or app."
+      ]
+    },
+    {
+      "tag": "customization_options",
+      "patterns": [
+        "do you offer customization options?",
+        "customize my order",
+        "special requests"
+      ],
+      "responses": [
+        "Yes, we offer customization options for certain dishes. You can specify your preferences or special requests during checkout.",
+        "Feel free to customize your order by adding special requests or preferences in the 'Order Notes' section."
+      ]
+    },
+    {
+      "tag": "delivery_confirmation",
+      "patterns": [
+        "how will I know when my food is delivered?",
+        "delivery confirmation",
+        "confirmation upon delivery"
+      ],
+      "responses": [
+        "We'll send you a delivery confirmation notification once your food has been successfully delivered.",
+        "You'll receive a confirmation notification when your food is delivered to your specified location."
+      ]
+    },
+    {
+      "tag": "order_recommendation",
+      "patterns": [
+        "recommend a dish for me",
+        "suggest something to order",
+        "what's popular on the menu?"
+      ],
+      "responses": [
+        "Our popular dishes include pizzas, burgers, pasta, and salads. You can also try our chef's specials for something unique!",
+        "Customers love our pizzas, burgers, and pasta dishes! You might want to try one of our signature dishes."
+      ]
+    },
+    {
+      "tag": "delivery_notification",
+      "patterns": [
+        "will I be notified when my order is out for delivery?",
+        "delivery updates",
+        "order tracking notifications"
+      ],
+      "responses": [
+        "Yes, you'll receive notifications at every stage of the delivery process. You'll be notified when your order is out for delivery.",
+        "You'll receive real-time updates on your order status. You'll know when your food is on its way to you!"
+      ]
+    },
+    {
+      "tag": "delivery_eta_inquiry",
+      "patterns": [
+        "how soon can I expect my delivery?",
+        "estimated time of arrival",
+        "delivery ETA"
+      ],
+      "responses": [
+        "Delivery times may vary depending on your location and current order volume. You'll receive an estimated time of arrival during checkout.",
+        "We'll provide you with an estimated delivery time based on your location and order details."
+      ]
+    },
+    {
+      "tag": "order_feedback",
+      "patterns": [
+        "can I provide feedback on my order?",
+        "rate my order",
+        "leave a review"
+      ],
+      "responses": [
+        "We welcome your feedback! You can leave a review and rate your order on our website or app.",
+        "Your feedback is valuable to us. Please take a moment to rate your order and share your experience."
+      ]
+    },
+    {
+      "tag": "order_status_inquiry",
+      "patterns": [
+        "how can I check my order status?",
+        "status of my order",
+        "where's my food?"
+      ],
+      "responses": [
+        "You can check your order status on our website or app. Simply log in to your account and go to the 'Order History' section.",
+        "Track your order status in real-time on our website or app. Enter your order details to get updates."
+      ]
+    },
+    {
+      "tag": "delivery_special_instructions",
+      "patterns": [
+        "can I provide special instructions for delivery?",
+        "delivery preferences",
+        "special requests"
+      ],
+      "responses": [
+        "Yes, you can specify special instructions or delivery preferences during checkout. We'll do our best to accommodate your requests.",
+        "Feel free to add any special instructions or delivery preferences in the 'Order Notes' section during checkout."
+      ]
+    },
+    {
+      "tag": "negative",
+      "patterns": [
+        "shut up",
+        "shutup",
+        "food was not good",
+        "delivery person was rude"
+      ],
+      "responses": [
+        "Sorry for inconvenience"
+      ]
+    },
+    {
+      "tag": "neutral",
+      "patterns": [
+        "food was average",
+        "late delivery"
+      ],
+      "responses": [
+        "Sorry we will look after it"
+      ]
+    },
+    {
+      "tag": "appetizers",
+      "patterns": [
+        "samosa price",
+        "samosa"
+      ],
+      "responses": [
+        "12"
+      ]
+    },
+    {
+      "tag": "appetizers",
+      "patterns": [
+        "pakora price",
+        "pakora"
+      ],
+      "responses": [
+        "20"
+      ]
+    },
+    {
+      "tag": "appetizers",
+      "patterns": [
+        "chicken tikka price",
+        "chicken tikka"
+      ],
+      "responses": [
+        "120"
+      ]
+    },
+    {
+      "tag": "appetizers",
+      "patterns": [
+        "What appetizers do you have?",
+        "Tell me about your appetizers",
+        "Appetizers menu"
+      ],
+      "responses": [
+        "samosa, pakora, chicken tikka"
+      ]
+    },
+    {
+      "tag": "main_course_vegetarian",
+      "patterns": [
+        "Chana masala",
+        "Chana masala price"
+      ],
+      "responses": [
+        "100"
+      ]
+    },
+    {
+      "tag": "main_course_vegetarian",
+      "patterns": [
+        "palak paneer",
+        "palak paneer price"
+      ],
+      "responses": [
+        "150"
+      ]
+    },
+    {
+      "tag": "main_course_vegetarian",
+      "patterns": [
+        "aloo gobi",
+        "aloo gobi price"
+      ],
+      "responses": [
+        "130"
+      ]
+    },
+    {
+      "tag": "main_course_vegetarian",
+      "patterns": [
+        "What vegetarian dishes do you have?",
+        "Tell me about your vegetarian options",
+        "Vegetarian menu"
+      ],
+      "responses": [
+        "Chana masala, palak paneer, aloo gobi"
+      ]
+    },
+    {
+      "tag": "main_course_non_vegetarian",
+      "patterns": [
+        "Chicken Curry",
+        "Chicken Curry price"
+      ],
+      "responses": [
+        "180"
+      ]
+    },
+    {
+      "tag": "main_course_non_vegetarian",
+      "patterns": [
+        "Fish Curry",
+        "Fish Curry price"
+      ],
+      "responses": [
+        "200"
+      ]
+    },
+    {
+      "tag": "main_course_non_vegetarian",
+      "patterns": [
+        "Butter Chicken",
+        "Butter Chicken price"
+      ],
+      "responses": [
+        "210"
+      ]
+    },
+    {
+      "tag": "main_course_non_vegetarian",
+      "patterns": [
+        "What non-vegetarian dishes do you have?",
+        "Tell me about your non-vegetarian options",
+        "Non-vegetarian menu"
+      ],
+      "responses": [
+        "Chicken Curry, Fish Curry, Butter Chicken"
+      ]
+    },
+    {
+      "tag": "desserts",
+      "patterns": [
+        "Gulab Jamun",
+        "Gulab Jamun price"
+      ],
+      "responses": [
+        "80"
+      ]
+    },
+    {
+      "tag": "desserts",
+      "patterns": [
+        "Rasmalai",
+        "Rasmalai price"
+      ],
+      "responses": [
+        "110"
+      ]
+    },
+    {
+      "tag": "desserts",
+      "patterns": [
+        "Kheer",
+        "Kheer price"
+      ],
+      "responses": [
+        "150"
+      ]
+    },
+    {
+      "tag": "desserts",
+      "patterns": [
+        "What desserts do you have?",
+        "Tell me about your desserts",
+        "Desserts menu"
+      ],
+      "responses": [
+        "kheer, rasmalai and gulab jamun"
+      ]
+    },
+    {
+      "tag": "beverages",
+      "patterns": [
+        "Masala Chai",
+        "Masala Chai price"
+      ],
+      "responses": [
+        "20"
+      ]
+    },
+    {
+      "tag": "beverages",
+      "patterns": [
+        "Lassi",
+        "Lassi price"
+      ],
+      "responses": [
+        "30"
+      ]
+    },
+    {
+      "tag": "beverages",
+      "patterns": [
+        "Mango Lassi",
+        "Mango Lassi price"
+      ],
+      "responses": [
+        "60"
+      ]
+    },
+    {
+      "tag": "beverages",
+      "patterns": [
+        "What beverages do you offer?",
+        "Tell me about your beverage options",
+        "Beverages menu"
+      ],
+      "responses": [
+        "Masala Chai, Lassi, Mango Lassi"
+      ]
+    },
+    {
+      "tag": "Trending",
+      "patterns": [
+        "Top selling indian dishes today"
+      ],
+      "responses": [
+        "Butter Chicken, Chicken Tikka Masala, Paneer Tikka"
+      ]
+    }
+  ]
+}

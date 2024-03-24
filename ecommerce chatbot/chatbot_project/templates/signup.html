@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup page</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+            
+        }
+        .main{
+            text-align: center;
+            margin-top: 100px;
+        }
+        .signup{
+            font-size: xx-large;
+        }
+
+        input{
+            font-size: large;
+            width: 500px;
+            height: 50px;
+            text-align: center;
+        }
+
+        .message{
+            font-size: xx-large;
+        }
+
+        .opt{
+            font-size: larger;
+        }
+        
+        a{
+            text-decoration: none;
+        }
+
+        a:hover{
+            color: blue;
+        }
+
+        button{
+            font-size: x-large;
+            border: none;
+            background-color: greenyellow;
+            width: 150px;
+            height: 45px;
+        }
+
+        #but{
+            background-color: lightblue;
+            color: white;
+        }
+
+        #but:hover{
+            color: #DDD0C8;
+        }
+    </style>
+</head>
+
+<body>
+    {% include "nav.html" %}
+    <div class="main">
+        <div class="signup">Signup</div> <br> <br>
+        <form action="signup" method="post" name="signup">
+            {% csrf_token %}
+            <input type="text" name="fname" id="fname" placeholder="Enter your first name" required>
+            <input type="text" name="lname" id="lname" placeholder="Enter your last name" required> <br> <br>
+            <input type="text" name="username" id="username" placeholder="Enter your username" required> <br> <br>
+            <input type="email" name="email" id="email" placeholder="Enter your e-mail" required> <br> <br>
+            <input type="password" name="password" id="password" placeholder="Enter your password" required> <br> <br> <br>
+            <button type="submit" id="but">Signup</button>
+        </form>
+        <br> <br> <br>
+        <div class="opt">
+            Already have an account? <a href="login">click here</a>!
+        </div>
+        <br><br>
+        <div class="message">
+            {% for message in messages %}
+            {{message}}
+            {% endfor %}
+        </div>
+    </div>
+    {% include "footer.html" %}
+</body>
+
+</html>

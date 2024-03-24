@@ -1,0 +1,710 @@
+{% load static %}
+{% include "nav.html" %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodpicky</title>
+
+  <!-- Link to Static CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'chatbot_project/stylesheets/staticStyle.css' %}">
+
+  <!-- Dynamic CSS -->
+  <style>
+    .main1 {
+      /* background-color: red; */
+      width: 100%;
+      height: 650px;
+      background-image: url("{% static 'chatbot_project/images/main1.jpg' %}");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: white;
+    }
+
+    #img1 {
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 650px;
+      background-position: center;
+      width: 100%;
+    }
+
+    video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      -o-object-position: center;
+      object-position: center;
+    }
+
+    #desc h2 {
+      background: #000000 none repeat scroll 0 0;
+      color: white;
+      font-weight: 600;
+      margin: 2rem 3rem 0;
+      mix-blend-mode: overlay;
+      padding: 5px 15px;
+      text-align: center;
+      font-size: 50px;
+      width: fit-content;
+      text-align: center;
+      margin: auto;
+    }
+
+    .main2 {
+      margin-top: 100px;
+      font-size: 50px;
+      background-color: pink;
+    }
+
+    .dogs {
+      background-image: url("static/Dog.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      float: left;
+      background-color: red;
+      height: 400px;
+      width: 50%;
+      margin-left: 0.5%;
+      border-radius: 10px;
+    }
+
+    .cats {
+      background-image: url("static/cat.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      float: right;
+      background-color: yellow;
+      height: 400px;
+      width: 50%;
+      margin-right: 0.5%;
+      border-radius: 10px;
+    }
+
+    .event {
+      text-align: center;
+      font-size: xx-large;
+      background-color: white;
+      width: fit-content;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: none;
+    }
+
+    .dogs:hover .event {
+      display: block;
+    }
+
+    .cats:hover .event {
+      display: block;
+    }
+
+    .main3 {
+      margin-top: 100px;
+      font-size: 50px;
+    }
+
+    .accessories {
+      background-image: url("{% static 'chatbot_project/images/new.jpg' %}");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-color: purple;
+      height: 500px;
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .accessories:hover .event {
+      display: block;
+    }
+
+    .main4 {
+      margin-top: 50px;
+      font-size: 50px;
+    }
+
+    .doctor {
+      background-image: url("static/doctor.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 100 100;
+      background-color: pink;
+      height: 500px;
+      width: 100%;
+    }
+
+    .doctor:hover .event {
+      display: block;
+    }
+
+    .seller {
+      text-align: center;
+      font-size: x-large;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: blue;
+    }
+
+    :root {
+      --fadeIn_fadeOut_transition_speed: 300ms;
+    }
+
+    /*Bot typing animation*/
+    .circle:nth-child(1),
+    .circle:nth-child(2),
+    .circle:nth-child(3) {
+      width: 10px;
+      height: 10px;
+      background-color: #fff;
+      display: inline-flex;
+      border-radius: 2em;
+      animation: botTyping .9s ease-in infinite;
+    }
+
+    .circle:nth-child(2) {
+      animation-delay: .15s;
+    }
+
+    .circle:nth-child(3) {
+      animation-delay: .25s;
+    }
+
+    @keyframes botTyping {
+      0% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    /*Chat style animation*/
+    .floatup-msg {
+      animation: floatup .5s forwards;
+    }
+
+    @keyframes floatup {
+      from {
+        transform: translateY(27px);
+      }
+
+      to {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+    }
+
+    /*ChatBot window fade in and fade out animation*/
+    .fade-out-transition {
+      transition: background-color 0.3s ease;
+    }
+
+    .fade-in-transition {
+      transition: var(--fadeIn_fadeOut_transition_speed);
+      transition-property: opacity, background-color, transform;
+      z-index: var(--chatBot_ZIndex);
+    }
+
+    .lp {
+      background-color: aqua;
+    }
+
+    #desc {
+      text-align: center;
+      font-size: 50px;
+    }
+
+    #showBotbtn {
+      width: 300px;
+    }
+
+    .aapi-popup-dialog {
+      width: 300px;
+    }
+
+    .Excl {
+      background-color: azure;
+      width: 100%;
+    }
+
+
+    .sample {
+      width: 100%;
+      height: 600px;
+      background-position: bottom;
+    }
+
+    .first {
+      float: left;
+      margin-left: 10%;
+      height: 600px;
+      width: 25%;
+    }
+
+    .first1 {
+      background-image: url("{% static 'chatbot_project/images/basic.jpg' %}");
+      background-repeat: no-repeat;
+      background-size: cover;
+      filter: drop-shadow(8px 8px 10px black);
+      width: 100%;
+      height: 320px;
+      color: white;
+      height: 600px;
+    }
+
+    .first2 {
+      background: rgba(0, 0, 0, 0);
+      color: white;
+      font-size: 30px;
+    }
+
+    .second {
+      float: left;
+      margin-left: 2.5%;
+      height: 600px;
+      width: 25%;
+    }
+
+    .second1 {
+      background-image: url("{% static 'chatbot_project/images/standard.jpg' %}");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 320px;
+      filter: drop-shadow(8px 8px 10px black);
+      height: 600px;
+    }
+
+    .second2 {
+      background: rgba(0, 0, 0, 0);
+      color: white;
+      font-size: 30px;
+    }
+
+    .third {
+      float: right;
+      margin-right: 10%;
+      height: 600px;
+      width: 25%;
+    }
+
+    .third1 {
+      background-image: url("{% static 'chatbot_project/images/biryani.jpg' %}");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 320px;
+      filter: drop-shadow(8px 8px 10px black);
+      height: 600px;
+    }
+
+    .third2 {
+      background: rgba(0, 0, 0, 0);
+      /* color: w; */
+      font-size: 30px;
+    }
+
+    .c {
+      text-align: center;
+      width: 50%;
+      display: none;
+      height: 50px;
+      margin: auto;
+      margin-top: 150px;
+      border-radius: 10px;
+    }
+
+    .first:hover .c {
+      background: rgba(0, 0, 0, .1);
+      display: block;
+
+    }
+
+    .second:hover .c {
+      background: rgba(0, 0, 0, .1);
+      display: block;
+    }
+
+    .third:hover .c {
+      background: rgba(0, 0, 0, .1);
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main1">
+    <div id="desc" style="background: rgba(0, 0, 0, 0.3)"> <br><br><br> <br>
+      Welcome to Foodpicky where you can <br> order food in one go
+    </div>
+  </div>
+  <div class="main3">
+    Multiple options available
+  </div>
+
+  {% if user.is_authenticated %}
+  <div class="accessories" onclick="window.location='accessories'">
+    {% else %}
+    <div class="accessories" onclick="window.location='login'">
+      {% endif %}
+      <div class="event">
+        Click&nbsp;here&nbsp;for&nbsp;details
+      </div>
+    </div>
+
+    <div class="main4">
+      Our meal plan <br>.
+    </div>
+
+  </div>
+  </div>
+
+
+  <div class="Excl">
+    <div class="sample">
+      <div class="ex">
+        {% if user.is_authenticated %}
+        <div class="first" onclick="location.href='first'">
+          {% else %}
+          <div class="first" onclick="location.href='login'">
+            {% endif %}
+            <div class="first1">
+              <div class="first2">
+                <center>
+                  <br>
+                  <h2>Basic</h2>
+                </center>
+
+              </div>
+              <div class="c">
+                Click for details
+              </div>
+            </div>
+          </div>
+          {% if user.is_authenticated %}
+          <div class="second" onclick="location.href='second'">
+            {% else %}
+            <div class="second" onclick="location.href='login'">
+              {% endif %}
+              <div class="second1">
+                <div class="second2">
+                  <center>
+                    <br>
+                    <h2>Standard</h2>
+                  </center>
+
+                </div>
+                <div class="c" style="color: white;">
+                  Click for details
+                </div>
+              </div>
+            </div>
+
+            {% if user.is_authenticated %}
+            <div class="third" onclick="location.href='third'">
+              {% else %}
+              <div class="third" onclick="location.href='login'">
+                {% endif %}
+                <!-- <div class="third" > -->
+                <div class="third1">
+                  <div class="third2">
+                    <center>
+                      <br>
+                      <h2>Premium</h2>
+                    </center>
+
+                  </div>
+                  <div class="c" style="color: white;">
+                    Click for details
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <br>
+        <div class="bot" style="background-color: black; position: fixed;
+               bottom: 0;
+               right: 0;">
+          <div id="botWindow" class="container fade-in-transition hidden">
+            <div class="header">
+              <div class="header">
+                <h1>Chatbot</h1>
+                <img src='{% static "chatbot_project/images/bot.png" %}'>
+              </div>
+              <button class="hideBot fade-out-transition" type="button" onclick="hideBotFun()">X</button>
+            </div>
+            <div class="body">
+              <p class="bot_message">Hi {{user.first_name}}! How can I help you ? </p>
+            </div>
+            <!-- Bot Typing animation -->
+            <div class="botTyping-bg">
+              <div class="botTyping hidden">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <span>Bot is typing</span>
+              </div>
+            </div>
+
+
+
+           
+            <form id="myForm" method="POST" >
+              {%csrf_token%}
+              <div class="footer">
+                <input id="query" type="text" onkeyup="checkText()" placeholder="Type..." name="query"
+                style="text-align: center;">
+                <button class="submit_btn" type="submit"> Send</button>
+              </div>
+            </form>
+
+
+
+
+          </div>
+          <!-- Here is the Aapi dialog message box to catch user's attention -->
+          <div class="popup-dialog fade-in-transition hidden">
+            <div class="aapi-popup-dialog">
+              <span>Hi {{ user.first_name }} <br>How may I help you today?</span>
+            </div>
+            <div class="attention"></div>
+            <div class="down-triangle"></div>
+          </div>
+          {% if user.is_authenticated %}
+          <button id="showBotbtn" class="showBot fade-in-transition" type="button" onclick="showBotFun()">Chat</button>
+          {% else %}
+          <button id="showBotbtn" class="showBot fade-in-transition" type="button"
+            onclick="location.href='login'">Chat</button>
+          {% endif %}
+
+        </div>
+
+        <!-- ajax string -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+
+        <!-- JavaScript -->
+        <script type="text/javascript">
+          "use strict";
+          const fadeIn_fadeOut_transition_speed = 300;
+          const messages = [];
+          let popupDialog = document.querySelector(".popup-dialog")
+
+          // onload function will run when page is rendered
+          window.onload = function () {
+            // ChatBot dialog popup function
+            setTimeout(() => {
+              // ChatBot dialog will only popup if user haven't used the chatBot.
+              if (messages.length === 0) {
+                popupDialog.classList.remove("hidden");
+                popupDialog.style.opacity = 0;
+                setTimeout(() => {
+                  popupDialog.style.opacity = 1;
+                }, fadeIn_fadeOut_transition_speed)
+              }
+            }, 5000);
+          }
+
+          // updates the chats
+          function updateChatText() {
+            let html = "";
+            let botHtmlTag = '<div class = "bot-message-block floatup-msg"><img class = "bot-profile" src="{% static "chatbot_project/images/bot.png" %}"><p class= bot_message>';
+            let userHtmlTag = '<div class = "user-message-block floatup-msg"><img class = "user-profile" src="{% static "chatbot_project/images/user.png" %}"><p class= user_message>';
+            messages.slice().reverse().forEach(function (item, index) {
+              if (item.name === "Bot") {
+                if (item.message.includes("https://") == true) {
+                  html += `<div class = "bot-message-block floatup-msg"><img class = "bot-profile" src="{% static "chatbot_project/images/bot.png" %}"><a class= bot_message href="${item.message}">${item.message}</a></div>`
+                }
+                else {
+                  html += botHtmlTag + item.message + '</p></div>'
+                }
+              } else {
+                html += userHtmlTag + item.message + '</p></div>'
+              }
+            });
+            const chatMessage = document.querySelector(".body");
+            chatMessage.innerHTML = html;
+          }
+
+          // To give chat like feel
+          function scrollToBottom() {
+            messages.scrollTop = messages.scrollHeight;
+          }
+
+          function showBotFun() {
+            // Initialize Variables
+            const chatBotWindow = document.getElementById("botWindow");
+
+            //Main Logic to show chatBot
+            chatBotWindow.style.opacity = 0;
+            chatBotWindow.style.transform = `translateY(10%)`;
+            document.querySelector(".container").classList.remove("hidden");
+
+            //Pausing the flow of the code for 0.3 secs
+            setTimeout(() => {
+              chatBotWindow.style.transform = `translateY(0%)`;
+              chatBotWindow.style.opacity = 1;
+            }, fadeIn_fadeOut_transition_speed);
+
+            //Main Logic to hide Chat button
+            const showBot = document.getElementById("showBotbtn");
+            showBot.style.opacity = 0;
+            popupDialog.style.opacity = 0;
+
+            //Pausing the flow of the code for 0.3 secs
+            setTimeout(() => {
+              document.querySelector(".showBot").classList.add("hidden");
+              popupDialog.classList.add("hidden");
+            }, fadeIn_fadeOut_transition_speed);
+
+            if (messages.length === 0) {
+              let msg2 = { name: "Bot", message: "Hello {{ user.first_name }}! How can I help you? <br> Type 'help' to get help" };
+              messages.push(msg2);
+              updateChatText();
+              scrollToBottom();
+            }
+          }
+
+          function hideBotFun() {
+            // Initialize Variables
+            const showBot = document.getElementById("showBotbtn");
+
+            //Main Logic to show Chat button
+            showBot.style.opacity = 0;
+
+            //Pausing the flow of the code for 0.3 secs
+            document.querySelector(".showBot").classList.remove("hidden");
+            setTimeout(() => {
+              showBot.style.opacity = 1;
+            }, fadeIn_fadeOut_transition_speed);
+
+            //Main Logic to hide chat bot
+            const chatBotWindow = document.getElementById("botWindow");
+            chatBotWindow.style.transform = `translateY(11%)`;
+            chatBotWindow.style.opacity = 0;
+
+            //Pausing the flow of the code for 0.3 secs
+            setTimeout(() => {
+              document.querySelector(".container").classList.add("hidden");
+            }, fadeIn_fadeOut_transition_speed);
+
+
+          }
+
+          function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+              const cookies = document.cookie.split(';');
+              for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                  cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                  break;
+                }
+              }
+            }
+            return cookieValue;
+          }
+          const csrftoken = getCookie('csrftoken');
+
+          // Disable the send button if there is no text in query field
+
+          const regex = /[A-Za-z0-9]/
+          let submit_btn = document.querySelector(".submit_btn");
+          function checkText() {
+            const inp_string = document.querySelector("#query").value
+            if (regex.test(inp_string) === false) {
+              submit_btn.disabled = true
+            } else {
+              submit_btn.disabled = false
+            }
+          }
+
+          // Here is the main code which Posts and gets responses
+          const form1 = document.getElementById("myForm");
+          const botTyping = document.querySelector(".botTyping")
+          const txtUserInp = document.querySelector("#query");
+          form1.addEventListener("submit", function (e) {
+            e.preventDefault();
+            if (txtUserInp.value == "") {
+              return
+            }
+            let msg1 = { name: "user1", message: txtUserInp.value }
+            messages.push(msg1);
+            updateChatText();
+            submit_btn.disabled = true;
+            botTyping.classList.remove("hidden");
+
+            // converting use input to lowerCase
+            let lowerCaseInput = $('#query').val().toLowerCase();
+
+            // Create the data object with the lowercase input
+            let requestData = { query: lowerCaseInput };
+
+            $.ajax({
+              method: "GET",
+              url: "{%url 'chatbot_project:chatBot'%}",
+              headers: {
+                "Content-type": "application/json",
+                "X-Requested-With": "XMLHttpRequest",
+                "X-CSRFToken": csrftoken,
+              },
+              data: requestData
+            })
+              // This steps should be done if the input is successfully submitted to the bot and get response
+              .done(function (response) {
+                const botRes = JSON.stringify(response);
+                const obj = JSON.parse(botRes);
+                let msg2 = { name: "Bot", message: obj.Bot };
+                messages.push(msg2);
+                updateChatText();
+                scrollToBottom();
+                submit_btn.disabled = false;
+                botTyping.classList.add("hidden");
+                txtUserInp.value = "";
+              })
+              // if any errors they will be thrown into the console
+              .fail(function (response) {
+                let msg2 = { name: "Bot", messages: "Internal server error, Please reload the page." }
+                messages.push(msg2);
+                updateChatText();
+                scrollToBottom();
+                submit_btn.disabled = false;
+                botTyping.classList.add("hidden");
+                txtUserInp.value = "";
+              })
+          })
+
+        </script>
+</body>
+{% include "footer.html" %}
+
+</html>

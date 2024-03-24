@@ -1,0 +1,35 @@
+{% load static %}
+{% include "nav.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodpicky</title>
+  <style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+<div class="main" style="text-align: center; font-size: xx-large;">
+
+{% for clientInfo in clientInfos %} <br><br>
+Order Id: {{ clientInfo.id }} <br><br>
+    Dish ordered: {{ clientInfo.item }}  <br><br>
+    Amount paid: {{ clientInfo.paid }} <br><br>
+    Date of dish ordered: {{ clientInfo.date }} <br><br>
+    Review given: {{ clientInfo.review }} <br><br><br><br> <br>
+{% endfor %}
+</div>
+</body>
+
+{% include "footer.html" %}
+
+</html>

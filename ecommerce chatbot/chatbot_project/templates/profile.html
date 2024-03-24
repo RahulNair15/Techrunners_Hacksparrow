@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            {% comment %} background-color: #DDD0C8; {% endcomment %}
+        }
+
+        .main{
+            text-align: center;
+        }
+
+        .heading{
+            font-size: 50px;
+            {% comment %} background-color: #DDD0C8; {% endcomment %}
+        }
+
+        .info{
+            font-size: xx-large;
+        }
+
+        button {
+            border: none;
+            width: 150px;
+            height: 45px;
+            font-size: large;
+            background-color: lightblue;
+        }
+
+        #log1{
+            color: white;
+        }
+
+        #log1:hover{
+            color: black;
+        }
+
+        button:hover {
+            color: #c3b7af;
+        }
+
+        .seller{
+            font-size: x-large;
+        }
+
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            color: blue;
+        }
+
+        #lop{
+            color: white;
+        }
+        #lop:hover{
+            color:#c3b7af;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav1">
+        {% include "nav.html" %}
+    </div>
+   
+   <div id="nav2">
+    {% comment %} {% include "sellernav.html" %} {% endcomment %}
+   </div>
+  
+   <div id="navv"></div>
+    <div class="main">
+        <div class="heading">Profile</div> <br><br>
+        <div class="info">
+        First name: {{user.first_name}} <br><br>
+        Last name: {{user.last_name}} <br><br>
+        username: {{user.username}} <br><br><br> 
+    </div>
+    
+    <div class="seller">
+        
+<!-- 
+        <button id = "log1" onclick="window.location='/'">Buyer mode</button> <br><br><br><br> -->
+    </div>
+        <button id = "log1" onclick="window.location='logout'">Logout</button>
+    <br><br><br><br><br><br>
+    </div>
+    {% include "footer.html" %}
+</body>
+
+<script>
+
+    let ops = localStorage.getItem("only")
+    if(ops == 1 || ops == null){
+        document.getElementById("lop").innerHTML = `Seller mode`
+        document.getElementById('nav2').style.display = 'none';
+    }else{
+        document.getElementById("lop").innerHTML = `Buyer mode`
+        document.getElementById('nav1').style.display = 'none';
+     
+    }
+
+    function wow(){
+        if(document.getElementById("lop").innerHTML == "Buyer mode")
+        {
+            window.location.href = "/"
+        }
+        else{
+            window.location.href = "opt"
+        }
+    }
+</script>
+
+</html>

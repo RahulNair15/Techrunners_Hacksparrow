@@ -1,0 +1,66 @@
+{% load static %}
+{% include "nav.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodpicky</title>
+  <style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+
+    
+    form {
+        padding-top: 100px;
+        text-align: center;
+        font-size: x-large;
+        padding-bottom: 100px;
+    }
+
+    input {
+        text-align: center;
+        height: 40px;
+        width: 300px;
+        font-size: large;
+    }
+
+    button {
+        border: none;
+        width: 150px;
+        height: 45px;
+        font-size: large;
+        background-color: greenyellow;
+    }
+
+    #but{
+        background-color: lightblue;
+        color: white;
+    }
+
+    #but:hover{
+        color: black;
+    }
+
+  </style>
+</head>
+
+<body>
+<div class="main" style="text-align: center; font-size: xx-large;">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="text" name="username" id="username" readonly value="{{request.user}}"><br><br><br>
+      <input type="file" name="img" id="img" style="margin-left: 100px;"> <br><br><br><br>
+        <button type="submit" id="but">Upload</button>
+    </form>
+</div>
+</body>
+
+{% include "footer.html" %}
+
+</html>
